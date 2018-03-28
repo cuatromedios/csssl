@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 async function upload() {
 
   let Client = require('ssh2-sftp-client');
