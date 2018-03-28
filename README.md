@@ -1,5 +1,5 @@
 # Cloud Sites SSL Certificate Generator
-**Create and install a certificate in 1 minute!** 
+**Create and validate a certificate in 1 minute!** 
 
 _By Ramses Moreno_
 
