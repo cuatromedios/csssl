@@ -1,5 +1,3 @@
-console.log('Uploader!!')
-
 async function upload() {
 
   let Client = require('ssh2-sftp-client');
