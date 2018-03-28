@@ -6,7 +6,7 @@ const { Console } = require('console');
 fs = require('fs')
 
 async function generate () {
-  console.log('**** Cloud Sites SSL certificate Generation and validator using Certbot')
+  console.log('**** Cloud Sites SSL certificate Generation and validator using Certbot v0.3.0')
   console.log('Please enter the domains you need certificates for, the first domain is going to be used as the directory for SFTP, for example "www.domain.com domain.com"')
   const sDomains = await promptly.prompt('Domains: ')
   const username = await promptly.prompt('SFTP username: ')
