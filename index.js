@@ -6,7 +6,7 @@ const { Console } = require('console');
 fs = require('fs')
 
 async function generate () {
-  console.log('**** Cloud Sites SSL certificate Generation and validator using Certbot v0.3.0')
+  console.log('**** Cloud Sites SSL certificate Generation and validator using Certbot v0.4.0')
   console.log('Please enter the domains you need certificates for, the first domain is going to be used as the directory for SFTP, for example "www.domain.com domain.com"')
   const sDomains = await promptly.prompt('Domains: ')
   const username = await promptly.prompt('SFTP username: ')
@@ -18,7 +18,7 @@ async function generate () {
     pDomains.push(aDomains[p])
   }
   const domain = aDomains[0]
-  const cmd = spawn('certbot', ['certonly', '--manual',  '--manual-public-ip-logging-ok', '--manual-auth-hook', `"node ./uploader.js ${domain} ${username} ${password}"`, '--preferred-challenges', 'http', ...pDomains], {shell: true})
+  const cmd = spawn('certbot', ['certonly', '--manual',  '--manual-public-ip-logging-ok', '--manual-auth-hook', `"csssluploader ${domain} ${username} ${password}"`, '--preferred-challenges', 'http', ...pDomains], {shell: true})
   cmd.stdout.on('data', (data) => {
     console.log(`${data}`);
   });

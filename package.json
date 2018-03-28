@@ -1,6 +1,6 @@
 {
   "name": "csssl",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Automatic SSL Generator for Cloud Sites",
   "preferGlobal": true,
   "scripts": {
@@ -28,6 +28,7 @@
     "url" : "https://github.com/cuatromedios/csssl"
   },
   "bin": {
-    "csssl": "index.js"
+    "csssl": "index.js",
+    "csssluploader": "uploader.js"
   }
 }

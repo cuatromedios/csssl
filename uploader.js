@@ -1,15 +1,5 @@
 console.log('Uploader!!')
 
-/*
-process.env.CERTBOT_VALIDATION = 'TESTCONTENT'
-process.env.CERTBOT_TOKEN = 'test'
-process.argv[2] = 'www.cuatromedios.com'
-process.argv[3] = 'cuatromedios'
-process.argv[4] = 'cu20A13tro'
-*/
-
-
-
 async function upload() {
 
   let Client = require('ssh2-sftp-client');
