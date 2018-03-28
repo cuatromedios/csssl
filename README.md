@@ -37,7 +37,7 @@ This script will run certbot, upload the http challenges contents using SFTP to 
   SFTP password: 
   ```
 6. The script will run certbot and upload the needed files to Cloud Sites.
-7. Once finished, the script is going to generate a file in current directory with the certificates needed in Cloud Sites Control Panel, for example www.domain.com.txt
+7. Once finished, the script is going to generate a file in current directory with the certificates needed in Cloud Sites Control Panel, for example `www.domain.com.txt`
 8. Open the generated txt file and copy / paste the certificates in each control panel fields (Certificate, Private Key and Intermediate), please note the intermediate certificate includes three certificates, copy all them in the field.
 9. There is no need to use a dedicated IP, so you could uncheck that checkbox.
 10. Thats all!
