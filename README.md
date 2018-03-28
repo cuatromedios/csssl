@@ -13,7 +13,7 @@ https://help.liquidweb.com/s/article/Installing-Let-s-Encrypt-SSL-in-Cloud-Sites
    ```
    sudo -H certbot certonly --manual --preferred-challenges http -d domain.com -d www.domain.com
    ```
-3. Install Cloud Sites SSL Certificate Generator globally:
+3. Install Cloud Sites SSL Certificate Generator globally (you will need to have [npm](https://www.npmjs.com/) already installed):
    ```
    npm install csssl -g
    ```
