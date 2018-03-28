@@ -25,7 +25,18 @@ This script will run certbot, upload the http challenges contents using SFTP to 
    ```
    sudo csssl
    ```
+3. The shell will ask you for sudo password
+4. Provide the domains you will need certificates for separated by spaces, normally the www and not www variations of one domain, starting with the www variation because is going to be used to locate the remote folder to upload the challenges
+5. Provide the SFTP username and password for your Cloud Sites web (it will automatically connect to ftp2.ftptoyoursite.com server)
+  ```
+  Password:
+  **** Cloud Sites SSL certificate Generation and validator using Certbot
+  Please enter the domains you need certificates for, the first domain is going to be used as the directory for SFTP, for example "www.domain.com domain.com"
+  Domains: www.domain.com domain.com
+  SFTP username: theusername
+  SFTP password: 
+  ```
 
 
-
+##### License:
 [MIT LICENSE](LICENSE.txt)

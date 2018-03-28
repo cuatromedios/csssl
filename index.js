@@ -18,7 +18,7 @@ async function generate () {
     pDomains.push(aDomains[p])
   }
   const domain = aDomains[0]
-  const cmd = spawn('certbot', ['certonly', '--manual',  '--manual-public-ip-logging-ok', '--manual-auth-hook', `"node uploader.js ${domain} ${username} ${password}"`, '--preferred-challenges', 'http', ...pDomains], {shell: true})
+  const cmd = spawn('certbot', ['certonly', '--manual',  '--manual-public-ip-logging-ok', '--manual-auth-hook', `"node ./uploader.js ${domain} ${username} ${password}"`, '--preferred-challenges', 'http', ...pDomains], {shell: true})
   cmd.stdout.on('data', (data) => {
     console.log(`${data}`);
   });
