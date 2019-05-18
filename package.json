@@ -23,9 +23,9 @@
     "promptly": "^3.0.3",
     "ssh2-sftp-client": "^2.1.0"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/cuatromedios/csssl"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuatromedios/csssl"
   },
   "bin": {
     "csssl": "index.js",

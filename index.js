@@ -3,6 +3,7 @@
 const promptly = require("promptly")
 const { spawn } = require('child_process')
 const { Console } = require('console');
+var command = 'certonly';
 fs = require('fs')
 
 async function generate () {
@@ -17,8 +18,9 @@ async function generate () {
     pDomains.push('-d')
     pDomains.push(aDomains[p])
   }
+  const directory = await promptly.prompt(`Directory: (Blank for /${aDomains[0]}/web/content)`, {default: `/${aDomains[0]}/web/content`})
   const domain = aDomains[0]
-  const cmd = spawn('certbot', ['certonly', '--manual',  '--manual-public-ip-logging-ok', '--manual-auth-hook', `"csssluploader ${domain} ${username} ${password}"`, '--preferred-challenges', 'http', ...pDomains], {shell: true})
+  const cmd = spawn('certbot', [command, '--manual', '--force-renewal', '--manual-public-ip-logging-ok', '--manual-auth-hook', `"csssluploader ${domain} ${username} ${password} ${directory}"`, '--preferred-challenges', 'http', ...pDomains], {shell: true})
   cmd.stdout.on('data', (data) => {
     console.log(`${data}`);
   });

@@ -9,7 +9,8 @@ async function upload() {
   const DOMAIN = process.argv[2]
   const USERNAME = process.argv[3]
   const PASSWORD = process.argv[4]
-  const DIR = `/${DOMAIN}/web/content/.well-known/acme-challenge/`
+  const DIRECTORY = process.argv[5]
+  const DIR = `/${DIRECTORY}/.well-known/acme-challenge/`
 
   let sftp = new Client();
   sftp.connect({
