@@ -1,6 +1,6 @@
 {
   "name": "csssl",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "Automatic SSL Generator for Cloud Sites",
   "preferGlobal": true,
   "scripts": {
