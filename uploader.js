@@ -25,6 +25,7 @@ async function upload() {
     console.log('Puting file ' + (DIR + FILENAME))
     return sftp.put(FILECONTENT, DIR + FILENAME);
   }).then ((data) => {
+    console.log('File stored ' + (DIR + FILENAME))
     process.exit(0)
   }).catch((err) => {
     console.log(err, 'catch error');
