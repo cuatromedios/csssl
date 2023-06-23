@@ -22,7 +22,7 @@
     "command-line-args": "^5.1.1",
     "commander": "^2.15.1",
     "promptly": "^3.0.3",
-    "ssh2-sftp-client": "^2.1.0"
+    "ssh2-sftp-client": "^2.5.2"
   },
   "repository": {
     "type": "git",
